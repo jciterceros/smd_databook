@@ -49,7 +49,9 @@ O projeto está atualmente em fase de desenvolvimento. A primeira fase de implem
 - [x] Implementação do sistema de scraping
 - [x] Coleta de dados de múltiplas fontes
 - [x] Validação e limpeza dos dados coletados
-- [ ] Estruturação do banco de dados
+- [x] Estruturação do banco de dados
+- [x] Documentação do banco de dados
+- [x] Documentação da arquitetura
 - [ ] Configuração inicial do PostgreSQL
 
 ### Fase 2 - Refatoração e Nova Arquitetura
