@@ -166,12 +166,25 @@ yarn start
 ```
 smd_databook/
 ├── src/
-│   ├── components/     # Componentes React
-│   ├── database/       # Configuração e modelos do banco de dados
-│   ├── utils/          # Funções utilitárias
-│   └── main.js         # Ponto de entrada da aplicação
-├── public/             # Arquivos estáticos
-└── package.json        # Dependências e scripts
+│   ├── docs/           # Documentação do projeto
+│   │   ├── database.puml      # Diagrama do banco de dados
+│   │   └── class-diagram.puml # Diagrama de classes
+│   │
+│   ├── json/          # Dados estruturados
+│   │   ├── types/     # Arquivos JSON com dados categorizados
+│   │   │   ├── packages.json    # Tipos de pacotes SMD
+│   │   │   ├── manufacturer.json # Fabricantes
+│   │   │   └── types.json       # Tipos de componentes
+│   │   └── *.json     # Arquivos JSON com dados dos componentes
+│   │
+│   └── utils/         # Utilitários e scripts
+│       ├── extractPackages.js      # Script para extrair tipos de pacotes
+│       ├── extractManufacturers.js # Script para extrair fabricantes
+│       └── extractTypes.js         # Script para extrair tipos de componentes
+│
+├── public/            # Arquivos estáticos
+├── .gitignore        # Arquivos ignorados pelo Git
+└── package.json      # Dependências e scripts
 ```
 
 ## 🤝 Contribuindo
