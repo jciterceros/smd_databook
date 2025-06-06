@@ -47,8 +47,8 @@ O projeto está atualmente em fase de desenvolvimento. A primeira fase de implem
 ### Fase 1 - Coleta de Dados (Em Andamento)
 - [x] Configuração do ambiente de desenvolvimento
 - [x] Implementação do sistema de scraping
-- [ ] Coleta de dados de múltiplas fontes
-- [ ] Validação e limpeza dos dados coletados
+- [x] Coleta de dados de múltiplas fontes
+- [x] Validação e limpeza dos dados coletados
 - [ ] Estruturação do banco de dados
 - [ ] Configuração inicial do PostgreSQL
 
