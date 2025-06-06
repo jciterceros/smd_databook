@@ -120,7 +120,7 @@ O objetivo principal do SMD Databook é fornecer uma base de dados organizada e 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/smd_databook.git
+git clone https://github.com/jciterceros/smd_databook.git
 ```
 
 2. Entre no diretório do projeto:
