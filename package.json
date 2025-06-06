@@ -1,0 +1,22 @@
+{
+  "name": "smd_databook",
+  "version": "1.0.0",
+  "description": "SMD Databook Scraper",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "links": "node src/getLinks.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smd",
+    "scraper",
+    "databook"
+  ],
+  "author": "Jciterceros",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
