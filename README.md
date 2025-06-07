@@ -165,11 +165,18 @@ yarn start
 
 ```
 smd_databook/
+├── docs/              # Documentação do projeto
+│   ├── architecture/  # Diagramas de arquitetura
+│   │   ├── database.puml           # Diagrama do banco de dados
+│   │   ├── class-diagram.puml      # Diagrama de classes
+│   │   └── nestjs-component-example.puml # Exemplo de componente
+│   ├── development/  # Documentação de desenvolvimento
+│   │   └── nestjs-structure.md     # Estrutura do projeto NestJS
+│   ├── images/       # Imagens geradas dos diagramas
+│   ├── api/          # Documentação da API
+│   └── guides/       # Guias e tutoriais
+│
 ├── src/
-│   ├── docs/           # Documentação do projeto
-│   │   ├── database.puml      # Diagrama do banco de dados
-│   │   └── class-diagram.puml # Diagrama de classes
-│   │
 │   ├── json/          # Dados estruturados
 │   │   ├── types/     # Arquivos JSON com dados categorizados
 │   │   │   ├── packages.json    # Tipos de pacotes SMD
