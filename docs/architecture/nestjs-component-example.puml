@@ -1,0 +1,94 @@
+@startuml Component Module Structure
+
+' Estilo do diagrama
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+' Interfaces
+interface IComponentService {
+    + findById(id: string): Promise<Component>
+    + findBySmdCode(code: string): Promise<Component[]>
+    + create(component: CreateComponentDto): Promise<Component>
+    + update(id: string, component: UpdateComponentDto): Promise<Component>
+    + delete(id: string): Promise<void>
+}
+
+' DTOs
+class CreateComponentDto {
+    + smdCode: string
+    + deviceName: string
+    + description: string
+    + datasheetUrl: string
+    + manufacturerId: string
+    + packageId: string
+    + typeId: string
+    + specifications: CreateSpecificationDto[]
+    + images: CreateImageDto[]
+}
+
+class UpdateComponentDto {
+    + smdCode?: string
+    + deviceName?: string
+    + description?: string
+    + datasheetUrl?: string
+    + manufacturerId?: string
+    + packageId?: string
+    + typeId?: string
+    + specifications?: UpdateSpecificationDto[]
+    + images?: UpdateImageDto[]
+}
+
+' Entity
+class Component {
+    + id: string
+    + smdCode: string
+    + deviceName: string
+    + description: string
+    + datasheetUrl: string
+    + manufacturer: Manufacturer
+    + package: Package
+    + type: ComponentType
+    + specifications: ComponentSpecification[]
+    + images: ComponentImage[]
+    + createdAt: Date
+    + updatedAt: Date
+}
+
+' Controller
+class ComponentController {
+    - componentService: IComponentService
+    + constructor(componentService: IComponentService)
+    + findById(id: string): Promise<Component>
+    + findBySmdCode(code: string): Promise<Component[]>
+    + create(component: CreateComponentDto): Promise<Component>
+    + update(id: string, component: UpdateComponentDto): Promise<Component>
+    + delete(id: string): Promise<void>
+}
+
+' Service
+class ComponentService {
+    - componentRepository: Repository<Component>
+    + constructor(componentRepository: Repository<Component>)
+    + findById(id: string): Promise<Component>
+    + findBySmdCode(code: string): Promise<Component[]>
+    + create(component: CreateComponentDto): Promise<Component>
+    + update(id: string, component: UpdateComponentDto): Promise<Component>
+    + delete(id: string): Promise<void>
+}
+
+' Module
+class ComponentModule {
+    + static register(): DynamicModule
+}
+
+' Relacionamentos
+ComponentController --> IComponentService
+ComponentService ..|> IComponentService
+ComponentService --> Component
+ComponentModule --> ComponentController
+ComponentModule --> ComponentService
+
+@enduml 
