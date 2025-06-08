@@ -1,22 +1,25 @@
 {
-  "name": "smd_databook",
+  "name": "smd-databook-monorepo",
   "version": "1.0.0",
-  "description": "SMD Databook Scraper",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "node src/main.js",
-    "links": "node src/getLinks.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "smd",
-    "scraper",
-    "databook"
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
   ],
-  "author": "Jciterceros",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^1.6.7",
-    "cheerio": "^1.0.0-rc.12"
+  "scripts": {
+    "start:backend": "npm run start --workspace=apps/backend",
+    "start:frontend": "npm run start --workspace=apps/frontend",
+    "start:scraper": "npm run start --workspace=apps/scraper",
+    "build:backend": "npm run build --workspace=apps/backend",
+    "build:frontend": "npm run build --workspace=apps/frontend",
+    "build:scraper": "npm run build --workspace=apps/scraper",
+    "test:backend": "npm run test --workspace=apps/backend",
+    "test:frontend": "npm run test --workspace=apps/frontend",
+    "test:scraper": "npm run test --workspace=apps/scraper"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "~5.2.2",
+    "eslint": "^8.42.0"
   }
 }
